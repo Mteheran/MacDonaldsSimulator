@@ -14,6 +14,7 @@ using Alexa.NET;
 using System.Net.Http;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace AlexaSimulator
 {
@@ -87,6 +88,11 @@ namespace AlexaSimulator
                         {
                             response = ResponseBuilder.Ask("Please, say the store number again?", null);
                         }
+                        break;
+
+                    case "storeslowsales":
+                       
+
                         break;
                 }
 

@@ -67,45 +67,45 @@ namespace MacDonaldsSimulator
 
             var stores = new List<Store>
             {
-                new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+                new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Poblado", Id = "001", Employees = 9, City= "Medellin", Country = "Colombia", Lat = 6.2518401, Long= -75.563591},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Robledo", Id = "002", Employees = 6, City= "Medellin", Country = "Colombia", Lat = 6.2518401, Long= -75.563591},
 
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Laureles", Id = "003", Employees = 18, City= "Medellin", Country = "Colombia", Lat = 6.2518401, Long= -75.563591},
 
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Centro", Id = "004", Employees = 16, City= "Bogota", Country = "Colombia", Lat = 4.6097102, Long= -74.081749},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Comuna 11", Id = "005", Employees = 14, City= "Bogota", Country = "Colombia", Lat = 4.6097102, Long= -74.081749},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Comuna 9", Id = "006", Employees = 13, City= "Bogota", Country = "Colombia", Lat = 4.6097102, Long= -74.081749},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Queens", Id = "007", Employees = 10, City= "New York", Country = "USA", Lat = 40.7142715, Long= -74.0059662},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Staten Island", Id = "008", Employees = 10, City= "New York", Country = "USA", Lat = 40.7142715, Long= -74.0059662},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Stadium", Id = "009", Employees = 9, City= "Texas", Country = "USA", Lat = 32.7830582, Long= -96.8066711},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Alamo", Id = "010", Employees = 11, City= "Texas", Country = "Estados Unidos", Lat = 32.7830582, Long= -96.8066711},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Barracas", Id = "011", Employees = 13, City= "Buenos Aires", Country = "Argentina", Lat = -34.6131516 , Long= -58.3772316},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "Chacarita", Id = "012", Employees = 20, City= "Buenos Aires", Country = "Argentina", Lat = -34.6131516 , Long= -58.3772316},
 
-new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 100),
+new Store { EventType=EventType, Hamburguer = (new Random().Next(4, 20)), Combo = (new Random().Next(4, 20)), Amount = (new Random().NextDouble() * 200),
 Name = "San Martin", Id = "013", Employees = 15, City= "Lima", Country = "Peru", Lat = -12.0431805 , Long= -77.0282364},
 
 
@@ -176,9 +176,9 @@ Name = "Mina", Id = "020", Employees = 10, City= "Barcelona", Country = "Spain",
 
             // Update the stock price by a random factor of the range percent
             var random = new Random((int)Math.Floor(store.Amount));
-            var pos = random.NextDouble() * 10;
-            var hamburguer = random.Next(1, 20);
-            var combos = random.Next(1, 10);
+            var pos = random.NextDouble() * 2;
+            var hamburguer = random.Next(1, 10);
+            var combos = random.Next(1, 5);
 
             store.Amount += pos;
             store.Combo += combos;
@@ -189,10 +189,10 @@ Name = "Mina", Id = "020", Employees = 10, City= "Barcelona", Country = "Spain",
             store.StoreSales.StoreID = store.Id;
             store.StoreSales.StoreName = store.Name;
             store.StoreSales.BigMac = random.Next(1, store.Hamburguer);
-            store.StoreSales.Milkshake = random.Next(1, store.Hamburguer);
-            store.StoreSales.McNuggets = random.Next(1, store.Hamburguer);
-            store.StoreSales.McMuffin = random.Next(1, store.Hamburguer);
-            store.StoreSales.Chips = random.Next(1, store.Hamburguer);
+            store.StoreSales.Milkshake = random.Next(1, store.Hamburguer * 2);
+            store.StoreSales.McNuggets = random.Next(1, store.Hamburguer * 2);
+            store.StoreSales.McMuffin = random.Next(1, store.Hamburguer * 2);
+            store.StoreSales.Chips = random.Next(1, store.Hamburguer * 2);
 
 
             return true;
