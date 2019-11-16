@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacDonaldsSimulator", "MacDonaldsSimulator\MacDonaldsSimulator.csproj", "{52A67E13-8728-4D77-A957-B76F3B8E4616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSimulator", "ClientSimulator\ClientSimulator.csproj", "{72B5C2A2-FC1F-4690-A0CE-2006E3689692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexaSimulator", "AlexaSimulator\AlexaSimulator.csproj", "{0CDF9941-4F3A-4D7F-B556-08521ABE96D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A67E13-8728-4D77-A957-B76F3B8E4616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A67E13-8728-4D77-A957-B76F3B8E4616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A67E13-8728-4D77-A957-B76F3B8E4616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A67E13-8728-4D77-A957-B76F3B8E4616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B5C2A2-FC1F-4690-A0CE-2006E3689692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B5C2A2-FC1F-4690-A0CE-2006E3689692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B5C2A2-FC1F-4690-A0CE-2006E3689692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B5C2A2-FC1F-4690-A0CE-2006E3689692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CDF9941-4F3A-4D7F-B556-08521ABE96D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDF9941-4F3A-4D7F-B556-08521ABE96D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDF9941-4F3A-4D7F-B556-08521ABE96D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDF9941-4F3A-4D7F-B556-08521ABE96D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
