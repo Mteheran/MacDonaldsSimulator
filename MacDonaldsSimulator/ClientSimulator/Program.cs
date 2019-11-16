@@ -62,8 +62,19 @@ namespace ClientSimulator
                     var data = new StringContent(json, Encoding.UTF8, "application/json");
 
                     var res = await client.PostAsync("https://insights-collector.newrelic.com/v1/accounts/1966971/events", data);
-                }
+
+                    var jsonSales = Newtonsoft.Json.JsonConvert.SerializeObject(store.StoreSales,
+                        new JsonSerializerSettings
+                        {
+                            ContractResolver = new CamelCasePropertyNamesContractResolver()
+                        });
+                    var dataSales = new StringContent(jsonSales, Encoding.UTF8, "application/json");
+
+                    var resSales = await client.PostAsync("https://insights-collector.newrelic.com/v1/accounts/1966971/events", dataSales);
+                
+
             }
+        }
         }
     }
 }

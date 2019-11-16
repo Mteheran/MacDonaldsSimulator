@@ -11,6 +11,9 @@ using Alexa.NET.Request;
 using Alexa.NET.Request.Type;
 using Alexa.NET.Response;
 using Alexa.NET;
+using System.Net.Http;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AlexaSimulator
 {
@@ -25,12 +28,14 @@ namespace AlexaSimulator
             var skillRequest = JsonConvert.DeserializeObject<SkillRequest>(json);
             var requestType = skillRequest.GetRequestType();
             Session session = skillRequest.Session;
-
+            var client = new HttpClient();
+            
+            client.DefaultRequestHeaders.Add("X-Query-Key", "NRIQ-Do69S-UGnW9QMIEyErTygz5XXT73u--L");
             SkillResponse response = null;
 
             if (requestType == typeof(LaunchRequest))
             {
-                response = ResponseBuilder.Tell("Welcome to MacdonalsApp Wich store do you want to consult!");
+                response = ResponseBuilder.Tell("Welcome to MacdonalsApp. Which store do you want to consult!");
                 response.Response.ShouldEndSession = false;
 
             }
@@ -44,29 +49,43 @@ namespace AlexaSimulator
                     case "store":
                         if (intentRequest.Intent.Slots.Count > 0)
                         {
-                            if (intentRequest.Intent.Slots["year"] != null &&
-                                intentRequest.Intent.Slots["year"].Value != null &&
-                                intentRequest.Intent.Slots["date"] != null &&
-                                intentRequest.Intent.Slots["date"].Value != null)
+                            if (intentRequest.Intent.Slots["storeName"] != null)
                             {
-                                DateTime dateValue = DateTime.Parse(intentRequest.Intent.Slots["date"].Value.ToString());
+                                string store = intentRequest.Intent.Slots["storeName"].Value.ToString();
+                                string query = "https://insights-api.newrelic.com/v1/accounts/1966971/query?nrql=SELECT%20id%2C%20amount%2Cname%2C%20city%20FROM%20StoreUpdate%20SINCE%201%20day%20ago%20%20LIMIT%2020";
 
-                                dateValue = dateValue.AddYears(int.Parse(intentRequest.Intent.Slots["year"].Value.ToString()) - dateValue.Year);
+                                var res = await client.GetStringAsync(query);
+                                try
+                                {
+                                    var data = JsonConvert.DeserializeObject<Data>(res);
+                                    var events = data.Results[0].Events;
+                                    var eventSelected = events.First(p => p.Id == store);
 
-                                int result = (DateTime.Now - dateValue).Days / 365;
+                                   //response = ResponseBuilder.Tell($"The store {eventSelected.Name} located in {eventSelected.City} has sales for located in {eventSelected.Amount} dollars");
 
-                                response = ResponseBuilder.Tell($"you are {result} years old");
-                                response.Response.ShouldEndSession = true;
+                                    var speechInvitation = new SsmlOutputSpeech();
+                                    speechInvitation.Ssml = $"<speak><voice name=\"Enrique\"><prosody rate=\"medium\"><lang xml:lang=\"es-ES\">La tienda {eventSelected.Name} ubicada en {eventSelected.City} tiene ventas por {Math.Round(eventSelected.Amount,2)} dolares</lang></prosody></voice></speak>";
+                                    response = ResponseBuilder.Tell(speechInvitation);
 
+
+                                    response.Response.ShouldEndSession = true;
+                                        
+                                }
+                                catch (Exception ex)
+                                {
+
+                                }
+                               
+                               
                             }
                             else
                             {
-                                response = ResponseBuilder.Ask("Please tell me, when were you born?", null);
+                                response = ResponseBuilder.Ask("Please, say the store number again?", null);
                             }
                         }
                         else
                         {
-                            response = ResponseBuilder.Ask("Please tell me, when were you born?", null);
+                            response = ResponseBuilder.Ask("Please, say the store number again?", null);
                         }
                         break;
                 }

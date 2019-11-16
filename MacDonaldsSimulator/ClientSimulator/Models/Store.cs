@@ -16,10 +16,6 @@ namespace MacDonaldsSimulator.Models
         public double Long { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-
-        public Store()
-        {
-            
-        }
+        public Sales StoreSales { get; set; }
     }
 }
