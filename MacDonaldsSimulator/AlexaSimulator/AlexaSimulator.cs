@@ -60,7 +60,12 @@ namespace AlexaSimulator
                                 {
                                     var data = JsonConvert.DeserializeObject<Data>(res);
                                     var events = data.Results[0].Events;
-                                    var eventSelected = events.First(p => p.Id == store);
+                                    var eventSelected = events.FirstOrDefault(p => p.Id == store);
+
+                                    if(eventSelected.Id == "")
+                                    {
+                                        eventSelected = events[0];
+                                    }
 
                                    //response = ResponseBuilder.Tell($"The store {eventSelected.Name} located in {eventSelected.City} has sales for located in {eventSelected.Amount} dollars");
 
